@@ -1,0 +1,21 @@
+| Column Name           | Data Type     | Description                   | Source                | Transformations |
+| --------------------- | ------------- | ----------------------------- | --------------------- | --------------- |
+| vendor_id             | INT           | Taxi system vendor identifier | NYC TLC – Yellow Taxi | None            |
+| pu_datetime           | DATETIME2     | Pickup date and time          | NYC TLC – Yellow Taxi | None            |
+| do_datetime           | DATETIME2     | Drop-off date and time        | NYC TLC – Yellow Taxi | None            |
+| passenger_cnt         | DECIMAL(18,4) | Number of passengers          | NYC TLC – Yellow Taxi | None            |
+| trip_distance         | DECIMAL(18,4) | Trip distance in miles        | NYC TLC – Yellow Taxi | None            |
+| tariff_type           | DECIMAL(18,4) | Applied rate code             | NYC TLC – Yellow Taxi | None            |
+| store_and_fwd         | NVARCHAR(20)  | Store-and-forward trip flag   | NYC TLC – Yellow Taxi | None            |
+| pu_location_id        | INT           | Pickup taxi zone identifier   | NYC TLC – Taxi Zones  | None            |
+| do_location_id        | INT           | Drop-off taxi zone identifier | NYC TLC – Taxi Zones  | None            |
+| payment_type          | DECIMAL(18,4) | Payment method                | NYC TLC – Yellow Taxi | None            |
+| fare_amount           | DECIMAL(18,4) | Base fare amount              | NYC TLC – Yellow Taxi | None            |
+| extra                 | DECIMAL(18,4) | Additional charges            | NYC TLC – Yellow Taxi | None            |
+| mta_tax               | DECIMAL(18,4) | MTA tax amount                | NYC TLC – Yellow Taxi | None            |
+| tip_amount            | DECIMAL(18,4) | Tip amount                    | NYC TLC – Yellow Taxi | None            |
+| tolls_amount          | DECIMAL(18,4) | Toll charges                  | NYC TLC – Yellow Taxi | None            |
+| improvement_surcharge | DECIMAL(18,4) | Improvement surcharge         | NYC TLC – Yellow Taxi | None            |
+| total_amount          | DECIMAL(18,4) | Total trip amount             | NYC TLC – Yellow Taxi | None            |
+| congestion_surcharge  | DECIMAL(18,4) | Congestion surcharge          | NYC TLC – Yellow Taxi | None            |
+| airport_fee           | DECIMAL(18,4) | Airport-related fee           | NYC TLC – Yellow Taxi | None            |
