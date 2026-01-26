@@ -1,0 +1,8 @@
+| Column Name            | Data Type | Description                                                                                  | Source Columns                            | Transformation              |
+| ---------------------- | --------- | -------------------------------------------------------------------------------------------- | ----------------------------------------- | --------------------------- |
+| event_date_key         | BIGINT    | Surrogate key referencing the date of the event                                              | `silver.ed_events.start_date_key`         | None                        |
+| agency_id              | TINYINT   | Identifier for the agency responsible for the event                                          | `silver.ed_events.agency_id`              | None                        |
+| event_type_id          | TINYINT   | Identifier for the type of event (e.g., parade, marathon, street fair)                       | `silver.ed_events.event_type_id`          | None                        |
+| borough_id             | TINYINT   | Borough where the event occurs (foreign key to borough dimension)                            | `silver.ed_events.borough_id`             | None                        |
+| street_closure_type_id | TINYINT   | Type of street closure caused by the event (full, partial, lane)                             | `silver.ed_events.street_closure_type_id` | None                        |
+| events_cnt             | INT       | Number of event occurrences aggregated for the date, agency, type, borough, and closure type | `silver.ed_events.event_occurance_id`     | `COUNT(event_occurance_id)` |
