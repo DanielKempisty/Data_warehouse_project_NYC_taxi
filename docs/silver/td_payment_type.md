@@ -1,0 +1,4 @@
+| Column Name     | Data Type    | Description                              | Source | Transformations                                                                                                     |
+| --------------- | ------------ | ---------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
+| payment_type_id | TINYINT      | Unique identifier for each payment type. | Manual | Manually populated with fixed IDs corresponding to payment methods.                                                 |
+| payment_type    | NVARCHAR(20) | Descriptive name of the payment type.    | Manual | Manually populated; standardized string labels such as credit card, cash, no charge, dispute, unknown, voided trip. |
