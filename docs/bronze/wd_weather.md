@@ -6,15 +6,15 @@
 | longitude       | NVARCHAR(50) | Longitude coordinate of the weather station.                                              | CSV files | None           |
 | elevation       | NVARCHAR(50) | Elevation of the weather station above sea level (in meters or feet as in source).        | CSV files | None           |
 | station_name    | NVARCHAR(50) | Name of the weather station.                                                              | CSV files | None           |
-| temp_mean       | NVARCHAR(50) | Average temperature for the day (°C or °F depending on source).                           | CSV files | None           |
+| temp_mean       | NVARCHAR(50) | Average temperature for the day (°F).                           | CSV files | None           |
 | temp_mean_att   | NVARCHAR(50) | Flag indicating if temp_mean is estimated or missing.                                     | CSV files | None           |
-| dew_p           | NVARCHAR(50) | Average dew point for the day (°C or °F depending on source).                             | CSV files | None           |
+| dew_p           | NVARCHAR(50) | Average dew point for the day (°F).                             | CSV files | None           |
 | dew_p_att       | NVARCHAR(50) | Flag indicating if dew_p is estimated or missing.                                         | CSV files | None           |
 | sl_pressure     | NVARCHAR(50) | Sea-level adjusted atmospheric pressure.                                                  | CSV files | None           |
 | sl_pressure_att | NVARCHAR(50) | Flag indicating if sl_pressure is estimated or missing.                                   | CSV files | None           |
 | st_pressure     | NVARCHAR(50) | Station-level atmospheric pressure.                                                       | CSV files | None           |
 | st_pressure_att | NVARCHAR(50) | Flag indicating if st_pressure is estimated or missing.                                   | CSV files | None           |
-| visibility      | NVARCHAR(50) | Average visibility distance during the day (in km or miles).                              | CSV files | None           |
+| visibility      | NVARCHAR(50) | Average visibility distance during the day (in miles).                              | CSV files | None           |
 | visibility_att  | NVARCHAR(50) | Flag indicating if visibility is estimated or missing.                                    | CSV files | None           |
 | wind_s_mean     | NVARCHAR(50) | Average wind speed at the station.                                                        | CSV files | None           |
 | wind_s_mean_att | NVARCHAR(50) | Flag indicating if wind_s_mean is estimated or missing.                                   | CSV files | None           |
