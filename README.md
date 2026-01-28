@@ -138,6 +138,8 @@ This layer ensures the data is clean, consistent, and optimized for reporting, w
 
 The project includes a **Power BI dashboard** built on the Gold layer, designed for data analysts to explore NYC taxi trips and their relationships with weather and city events.  
 
+![Data Warehouse Architecture](docs/Dashboard_screen.png)
+
 The dashboard is divided into **four main sections**:
 - **Main Overview:** provides key performance indicators (KPIs) for an at-a-glance view of taxi activity.
 - **Price Components"** page enables detailed fare analysis.
