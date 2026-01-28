@@ -74,10 +74,10 @@ The data warehouse enables analysis of NYC taxi activity across multiple dimensi
 ```  
 Data_warehouse_project_NYC_taxi/
 │
-├── docs                             # Documentation, data models, and architecture artifacts
-│ ├── bronze                         # Data catalogs for the Bronze layer (raw datasets)
-│ ├── silver                         # Data catalogs for the Silver layer (cleaned and conformed data)
-│ ├── gold                           # Data catalogs for the Gold layer (analytics-ready data)
+├── docs                            # Documentation, data models, and architecture artifacts
+│ ├── bronze                        # Data catalogs for the Bronze layer (raw datasets)
+│ ├── silver                        # Data catalogs for the Silver layer (cleaned and conformed data)
+│ ├── gold                          # Data catalogs for the Gold layer (analytics-ready data)
 │ │
 │ ├── naming_conventions.md         # Naming standards for schemas, tables, and columns
 │ ├── Architecture_diagram.png      # High-level data warehouse architecture diagram
