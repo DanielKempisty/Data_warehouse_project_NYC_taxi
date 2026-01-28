@@ -237,5 +237,129 @@ Sample checks include:
 - ❌ Does not include business metrics or aggregations (deferred to Gold)  
 - ❌ Some complex corrections (beyond obvious errors) are not applied to keep raw signal intact  
 
+## 🟨 Gold Layer – Aggregated & Analytics-Ready Data
 
+### 📥 Data Scope
+
+The Gold layer contains **analytics-ready datasets** derived from the Silver layer.  
+It includes:
+
+- Aggregated data by **day, hour, borough, taxi type, and trip type**  
+- Enriched data with **weather, events, and holidays**  
+- Ready for **Power BI dashboards** and other analytical consumption  
+
+This layer ensures the data is clean, consistent, and optimized for reporting, without including raw trip-level details.
+
+---
+
+### ⚙️ Transformations & Aggregations
+
+Key operations in the Gold layer:
+
+1. **Aggregation and summarization**
+   - Summaries per time period, location, and trip type  
+   - Calculation of totals, averages, and counts necessary for analysis  
+   - No raw data modifications; Silver data remains intact  
+
+2. **Enrichment with contextual data**
+   - Weather and holiday indicators applied per aggregation period  
+   - Event flags applied per borough and date  
+
+> Note: All analytical metrics such as fare averages, trip counts, or speed calculations are intended to be created **in Power BI using DAX**, not in the Gold layer itself.
+
+---
+
+### 🗂️ Data Modeling
+
+- Gold layer uses **fact and dimension tables** optimized for analytical queries  
+- Diagram of Gold layer data model:
+
+![Gold Layer Data Model](docs/Data_model_gold.png)  
+*(Insert your actual diagram image in the path above)*
+
+- This design allows dashboards to efficiently calculate metrics and KPIs dynamically.
+
+---
+
+### 🔒 Transformations NOT Applied
+
+- No business metrics or KPIs are calculated at the database level  
+- Data remains at a level suitable for flexible analysis in BI tools  
+- Predictive modeling and advanced ML features are not implemented
+
+---
+
+### ⚖️ Design Trade-offs
+
+- ✔️ Provides **clean, aggregated, analytics-ready data**  
+- ✔️ Preserves Silver layer integrity (raw data remains unchanged)  
+- ✔️ Enables dynamic KPI calculation in Power BI via DAX  
+- ❌ No pre-calculated KPIs; all metrics are computed in BI layer  
+- ❌ Aggregations reduce granularity compared to Silver layer
+
+## 📊 Power BI Dashboard
+
+The project includes a **Power BI dashboard** built on the Gold layer, designed for data analysts to explore NYC taxi trips and their relationships with weather and city events.  
+
+The dashboard is divided into **four main sections**:
+
+---
+
+### 1️⃣ Main Overview
+
+The **Main** page provides key performance indicators (KPIs) for an at-a-glance view of taxi activity:
+
+- **No. of Trips** – total trips in selected period  
+- **No. of Trips per Hour** – hourly distribution of trips  
+- **Total Amount** – total revenue from trips  
+- **Average Price** – average fare per trip  
+- **Average Price per km** – normalized by distance  
+- **Average Time [min]** – average trip duration  
+- **Average Distance** – average trip distance  
+- **Average Speed [km/h]** – average speed for trips  
+
+This page serves as the **primary dashboard landing** for high-level insights.
+
+---
+
+### 2️⃣ Price Components
+
+The **Price Components** page enables detailed fare analysis:
+
+- **No. of Trips** – count of trips  
+- **Total Amount** – total revenue  
+- **Average Price** – average fare per trip  
+- **Average Price per km / per min** – normalized metrics  
+- **Average Fare / per km / per min** – fare component analysis  
+
+This section allows analysts to **understand fare composition** and identify pricing trends.
+
+---
+
+### 3️⃣ Weather Impact
+
+The **Weather Impact** page shows relationships between **weather conditions** and taxi activity:
+
+- Correlation of temperature, precipitation, and other weather factors with trip counts and fares  
+- Enables investigation of how **adverse weather affects demand and pricing**
+
+---
+
+### 4️⃣ Events Impact
+
+The **Events Impact** page allows exploration of **city events and holidays**:
+
+- Trips during events or holidays vs. regular days  
+- Analysis by borough and date  
+- Helps identify **event-driven patterns** in taxi demand and pricing
+
+---
+
+### ⚖️ Design Notes
+
+- Dashboard uses **Gold layer data** exclusively; all raw-level processing occurs upstream in SQL  
+- KPIs and calculations are implemented in **Power BI via DAX**, allowing dynamic slicing and filtering  
+- Designed primarily for **data analysts** rather than business users  
+- The Gold layer structure still allows adaptation for **business-oriented dashboards** if needed  
+- Supports exploration **without modifying underlying data**, preserving data integrity
 
