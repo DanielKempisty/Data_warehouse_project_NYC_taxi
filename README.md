@@ -90,4 +90,26 @@ Data_warehouse_project_NYC_taxi/
 │
 ├── README.md                           # Project overview, architecture, and documentation
 
+## 📁 Repository Structure
+
+Data_warehouse_project_NYC_taxi/
+│
+├── docs/
+│ ├── bronze/
+│ ├── silver/
+│ ├── gold/
+│ │
+│ ├── naming_conventions.md
+│ ├── Architecture_diagram.png
+│ ├── Data_model_silver.png
+│ └── Data_model_gold.png
+│
+├── scripts/
+│ ├── bronze/
+│ ├── silver/
+│ └── gold/
+│
+└── README.md
+
+To jest najczystsza i najbezpieczniejsza forma:
 
