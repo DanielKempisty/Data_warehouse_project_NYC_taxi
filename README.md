@@ -217,7 +217,7 @@ Sample checks include:
 - Prepares data for analytics without performing business-level aggregations  
 - Diagram of Silver layer data model:  
 
-![Silver Layer Data Model](docs/[Data model - silver].png)  
+![Silver Layer Data Model]([docs/Data model - silver].png)  
 
 ---
 
