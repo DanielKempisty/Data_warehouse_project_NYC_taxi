@@ -34,7 +34,6 @@ From a **data analyst’s perspective**, there is a need for a curated dataset t
 
 This project addresses that gap by building a structured data warehouse that transforms raw data into a reliable analytical foundation.
 
----
 
 ### 📊 Key Analytical Use Cases
   
@@ -43,14 +42,12 @@ This project addresses that gap by building a structured data warehouse that tra
 - **Weather impact**: how temperature and precipitation affect trips and revenue
 - **Events & holidays**: effect on taxi activity
 
----
 
 ### 🎯 Target User
 
 - Data analysts exploring transportation patterns and trends in New York City  
 - Analysts looking for a clean, extensible dataset for ad-hoc analysis and reporting
 
----
 
 ### 🔎 Scope of Analysis
 
