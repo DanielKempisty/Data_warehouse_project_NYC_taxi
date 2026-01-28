@@ -18,6 +18,9 @@ The final output of the project includes:
 
 While this project is a learning-focused simulation, it was built to resemble a **production-like environment**, incorporating elements such as logging, SQL procedures, and basic data quality checks.
 
+---
+
+
 ## 🔍 Problem Statement & Use Cases
 
 ### 🧩 Problem Statement
@@ -55,6 +58,9 @@ This project addresses that gap by building a structured data warehouse that tra
 - Descriptive and exploratory analytics
 - No real-time processing or predictive modeling
 
+---
+
+
 ## 📁 Repository Structure
 ```  
 Data_warehouse_project_NYC_taxi/
@@ -75,7 +81,11 @@ Data_warehouse_project_NYC_taxi/
 │ └── gold                          # Scripts for aggregations and analytical tables
 │
 └── README.md                       # Project overview, architecture, and documentation
-```  
+```
+
+---
+
+
 ## 🟫 Bronze Layer – Raw Data
 
 - Stores raw datasets from NYC TLC, weather stations, and city events/holidays
@@ -85,6 +95,9 @@ Data_warehouse_project_NYC_taxi/
 - Data is stored **as-is**, preserving the original source values.
 
 The Bronze layer acts as a **raw and immutable landing zone**.
+
+---
+
 
 ## ⬜ Silver Layer – Clean & Conformed Data
 
@@ -116,6 +129,7 @@ Sample checks include:
 
 ---
 
+
 ## 🟨 Gold Layer – Aggregated & Analytics-Ready Data
 
 The Gold layer contains **analytics-ready datasets** derived from the Silver layer.  
@@ -133,6 +147,7 @@ This layer ensures the data is clean, consistent, and optimized for reporting, w
 ![Gold Layer Data Model](docs/Data_model_gold.png)  
 
 ---
+
 
 ## 📊 Power BI Dashboard
 
