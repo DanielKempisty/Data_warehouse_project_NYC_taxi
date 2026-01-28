@@ -8,7 +8,7 @@ Data is ingested in **batch mode** and processed using a **three-layer medallion
 
 ### 🏗️ High-Level Architecture
 
-![Data Warehouse Architecture](docs/Architecture_diagram.png)
+![Data Warehouse Architecture](docs/Architecture_overview.png)
 
 The architecture was designed to be **flexible and extensible**. Although the project currently covers historical data for the year **2024 only**, adding data for future years (e.g. 2025) would require minimal changes to the existing pipeline.
 
@@ -65,7 +65,7 @@ Data_warehouse_project_NYC_taxi/
 │ ├── gold                          # Data catalogs for the Gold layer (analytics-ready data)
 │ │
 │ ├── naming_conventions.md         # Naming standards for schemas, tables, and columns
-│ ├── Architecture_diagram.png      # High-level data warehouse architecture diagram
+│ ├── Architecture_overview.png     # High-level data warehouse architecture diagram
 │ ├── Data_model_silver.png         # Logical data model for the Silver layer
 │ └── Data_model_gold.png           # Analytical data model for the Gold layer
 │
