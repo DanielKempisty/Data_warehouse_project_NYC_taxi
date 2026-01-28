@@ -74,22 +74,22 @@ The data warehouse enables analysis of NYC taxi activity across multiple dimensi
 ```  
 Data_warehouse_project_NYC_taxi/
 │
-├── docs/ # Documentation, data models, and architecture artifacts
-│ ├── bronze/ # Data catalogs for the Bronze layer (raw datasets)
-│ ├── silver/ # Data catalogs for the Silver layer (cleaned and conformed data)
-│ ├── gold/ # Data catalogs for the Gold layer (analytics-ready data)
+├── docs                             # Documentation, data models, and architecture artifacts
+│ ├── bronze                         # Data catalogs for the Bronze layer (raw datasets)
+│ ├── silver                         # Data catalogs for the Silver layer (cleaned and conformed data)
+│ ├── gold                           # Data catalogs for the Gold layer (analytics-ready data)
 │ │
-│ ├── naming_conventions.md # Naming standards for schemas, tables, and columns
-│ ├── Architecture_diagram.png # High-level data warehouse architecture diagram
-│ ├── Data_model_silver.png # Logical data model for the Silver layer
-│ └── Data_model_gold.png # Analytical data model for the Gold layer
+│ ├── naming_conventions.md         # Naming standards for schemas, tables, and columns
+│ ├── Architecture_diagram.png      # High-level data warehouse architecture diagram
+│ ├── Data_model_silver.png         # Logical data model for the Silver layer
+│ └── Data_model_gold.png           # Analytical data model for the Gold layer
 │
-├── scripts/ # SQL scripts for data ingestion and transformations
-│ ├── bronze/ # Scripts for extracting and loading raw source data
-│ ├── silver/ # Scripts for cleaning, standardizing, and integrating data
-│ └── gold/ # Scripts for aggregations and analytical tables
+├── scripts                         # SQL scripts for data ingestion and transformations
+│ ├── bronze                        # Scripts for extracting and loading raw source data
+│ ├── silver                        # Scripts for cleaning, standardizing, and integrating data
+│ └── gold                          # Scripts for aggregations and analytical tables
 │
-└── README.md # Project overview, architecture, and documentation
+└── README.md                       # Project overview, architecture, and documentation
 ```  
 
 
