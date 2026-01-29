@@ -102,7 +102,7 @@ The warehouse follows a **three-layer medallion architecture**:
 
 - Built on **Gold layer**; supports filtering by time, location, taxi type, and trip attributes
 - Interactive exploration of trips with weather and event context
-- [Dashboard link](https://your-link-here) (~250 MB)
+- [Dashboard link (Google Drive)](https://drive.google.com/drive/folders/1HApFSHVwSZA4j4U3zWaxO_Lec31eu6VE?usp=sharing) (~250 MB)
 
 ![Dashboard Screenshot](docs/Dashboard_screen.png)
 
