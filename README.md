@@ -148,18 +148,20 @@ A **Power BI dashboard** was built on top of the Gold layer to provide analysts 
 - The dashboard consumes **aggregated, analytics-ready datasets** from Gold.
 - Supports filtering by **time, location, taxi type, and trip attributes**.
 - Designed for **data analysts**, but the Gold layer structure allows adaptation for **business reporting**.
-- Due to file size (~250 MB), the full dashboard is available via [Google Drive link](https://your-link-here).
 
 ---
 
-## 📈 Example Analytical Insights
+## 📊 Power BI Dashboard
 
-The warehouse enables analysts to generate insights such as:
+A **Power BI dashboard** was built on top of the Gold layer to provide analysts with **interactive exploration** of NYC taxi trips in relation to weather and city events.
 
-- **Taxi demand peaks** during weekday evenings, especially in Manhattan.
-- **Adverse weather** correlates with higher fares and shorter trips.
-- **Major city events** increase trip volumes in affected boroughs.
-- **Average trip speeds** drop during rush hours and large-scale events.
+![Dashboard Screenshot](docs/Dashboard_screen.png)
+
+- The dashboard consumes **aggregated, analytics-ready datasets** from Gold.  
+- Supports filtering by **time, location, taxi type, and trip attributes**.  
+- Designed for **data analysts**, but the Gold layer structure allows adaptation for **business reporting**.
+- Due to file size (~250 MB), the full dashboard is available via [Google Drive link](https://your-link-here).
+
 
 
 
