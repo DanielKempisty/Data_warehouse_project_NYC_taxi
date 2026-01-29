@@ -139,18 +139,6 @@ These metrics demonstrate the **scale, performance, and operational consideratio
 
 ---
 
-## 📊 Power BI Dashboard 
-
-A **Power BI dashboard** was built on top of the Gold layer to provide analysts with **interactive exploration** of NYC taxi trips in relation to weather and city events.
-
-![Dashboard Screenshot](docs/Dashboard_screen.png)
-
-- The dashboard consumes **aggregated, analytics-ready datasets** from Gold.
-- Supports filtering by **time, location, taxi type, and trip attributes**.
-- Designed for **data analysts**, but the Gold layer structure allows adaptation for **business reporting**.
-
----
-
 ## 📊 Power BI Dashboard
 
 A **Power BI dashboard** was built on top of the Gold layer to provide analysts with **interactive exploration** of NYC taxi trips in relation to weather and city events.
