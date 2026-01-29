@@ -122,24 +122,23 @@ The warehouse follows a **three-layer medallion architecture**:
 
 ```
 Data_warehouse_project_NYC_taxi/
-Data_warehouse_project_NYC_taxi/
 │
-├── docs/                                         # Project documentation and architecture
-│   ├── bronze/                                   # Table and column descriptions for Bronze layer
-│   ├── silver/                                   # Table and column descriptions for Silver layer
-│   ├── gold/                                     # Table and column descriptions for Gold layer
-│   ├── Architecture_overview.png                 # High-level architecture diagram
-│   ├── Dashboard_screen.png                      # Power BI dashboard screenshot
-│   ├── Data_model_silver.png                     # Silver layer data model diagram
-│   ├── Data_model_gold.png                       # Gold layer data model diagram
-│   └── naming_conventions.md                     # Naming standards for schemas, tables, and columns
+├── docs/                                # Project documentation and architecture
+│   ├── bronze/                          # Table and column descriptions for Bronze layer
+│   ├── silver/                          # Table and column descriptions for Silver layer
+│   ├── gold/                            # Table and column descriptions for Gold layer
+│   ├── Architecture_overview.png        # High-level architecture diagram
+│   ├── Dashboard_screen.png             # Power BI dashboard screenshot
+│   ├── Data_model_silver.png            # Silver layer data model diagram
+│   ├── Data_model_gold.png              # Gold layer data model diagram
+│   └── naming_conventions.md            # Naming standards for schemas, tables, and columns
 │
-├── scripts/                                      # SQL scripts for ETL and transformations
-│   ├── bronze/                                   # Scripts for extracting & loading raw data
-│   ├── silver/                                   # Scripts for cleaning, standardizing, and integrating data
-│   ├── gold/                                     # Scripts for aggregations and analytical tables
+├── scripts/                             # SQL scripts for ETL and transformations
+│   ├── bronze/                          # Scripts for extracting & loading raw data
+│   ├── silver/                          # Scripts for cleaning, standardizing, and integrating data
+│   ├── gold/                            # Scripts for aggregations and analytical tables
 │
-└── README.md                                     # Project overview and documentation
+└── README.md                            # Project overview and documentation
 
 ```
 
