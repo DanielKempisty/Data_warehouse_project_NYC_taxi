@@ -39,13 +39,29 @@ The solution follows a **batch-oriented medallion architecture** with clear sepa
 
 ![Data Warehouse Architecture](docs/Architecture_overview.png)
 
-- **Bronze** acts as a raw ingestion layer, preserving source data in its original form.
-- **Silver** performs data cleansing, standardization, validation, and integration across sources.
-- **Gold** delivers aggregated, analytics-ready datasets optimized for downstream consumption.
+### 🥉 Bronze Layer – Raw Data
+
+- Stores **raw datasets** from external sources.
+- Data is ingested via **BULK INSERT** in SQL Server, in batch mode.
+- **No transformations** are applied; data is stored **as-is** to preserve lineage and ensure full auditability.
+- Serves as a **landing zone** for reprocessing and debugging.
+
+### 🥈 Silver Layer – Cleaned & Conformed Data
+
+- Performs **data cleaning and standardization**
+- **Integrates external sources**:
+  - weather and events joined to trips by date/borough.
+- Implements **Primary/Foreign Keys** and indexes to ensure referential integrity and efficient joins.
+- Applies **data quality rules**, tags invalid records with `reject_id`, and validates proper assignment.
+- Preserves **per-trip granularity** for downstream analytics.
+
+### 🥇 Gold Layer – Aggregated & Analytics-Ready Data
+
+- Produces **aggregated datasets** optimized for reporting and dashboards:
+- Uses **Clustered Columnstore Indexes** for high-performance analytical queries.
+- Designed to support **Power BI dashboards** and other analytical tools without modifying raw or Silver data.
 
 The architecture is designed to be **modular and extensible**. Although the current implementation processes historical data for the year 2024, extending the pipeline to support additional years or datasets would require minimal structural changes.
-
-All processing is performed in **batch mode**, prioritizing data consistency, reproducibility, and operational stability over real-time complexity.
 
 ---
 
@@ -123,56 +139,7 @@ These metrics demonstrate the **scale, performance, and operational consideratio
 
 ---
 
- ## 🗂️ Data Flow by Layer
-
-This section summarizes the **processing and responsibilities** of each data layer in the medallion architecture.
-
-### 🥉 Bronze Layer – Raw Data
-
-- Stores **raw datasets** from NYC TLC (Yellow, Green, FHV), weather stations, and city events/holidays.
-- Data is ingested via **BULK INSERT** in SQL Server, in batch mode.
-- **No transformations** are applied; data is stored **as-is** to preserve lineage and ensure full auditability.
-- Serves as a **landing zone** for reprocessing and debugging.
-
-### 🥈 Silver Layer – Cleaned & Conformed Data
-
-- Performs **data cleaning and standardization**:
-  - type normalization (dates, numerics),
-  - deduplication,
-  - removal of obvious errors,
-  - unit conversions (e.g., miles → kilometers).
-- **Integrates external sources**:
-  - weather and events joined to trips by date/borough.
-- Implements **Primary/Foreign Keys** and indexes to ensure referential integrity and efficient joins.
-- Applies **data quality rules**, tags invalid records with `reject_id`, and validates proper assignment.
-- Preserves **per-trip granularity** for downstream analytics.
-
-### 🥇 Gold Layer – Aggregated & Analytics-Ready Data
-
-- Produces **aggregated datasets** optimized for reporting and dashboards:
-  - by time (hour, day), location (borough), taxi type, and trip type.
-- Enriched with weather, events, and holiday context.
-- Uses **Clustered Columnstore Indexes** for high-performance analytical queries.
-- Designed to support **Power BI dashboards** and other analytical tools without modifying raw or Silver data.
-
----
-
-## 📊 Analytics Enablement
-
-While this project focuses on **data engineering**, the resulting warehouse enables downstream analytics and reporting by providing a **clean, integrated, and query-optimized dataset**.
-
-Key analytical capabilities supported:
-
-- **Demand & traffic patterns**: analyze hourly, daily, and borough-level trends in taxi activity.
-- **Pricing & trip analysis**: explore fare composition, averages, distance-based metrics, and trip durations.
-- **Weather impact**: assess how temperature, precipitation, and adverse conditions affect trips and revenue.
-- **Events & holidays**: evaluate how city events and public holidays influence taxi demand across boroughs.
-
-> These examples illustrate the **types of analyses enabled** by the warehouse, without performing the analysis in the data engineering layer itself.
-
----
-
-## 📊 Power BI Dashboard
+## 📊 Power BI Dashboard 
 
 A **Power BI dashboard** was built on top of the Gold layer to provide analysts with **interactive exploration** of NYC taxi trips in relation to weather and city events.
 
@@ -182,8 +149,6 @@ A **Power BI dashboard** was built on top of the Gold layer to provide analysts 
 - Supports filtering by **time, location, taxi type, and trip attributes**.
 - Designed for **data analysts**, but the Gold layer structure allows adaptation for **business reporting**.
 - Due to file size (~250 MB), the full dashboard is available via [Google Drive link](https://your-link-here).
-
-> The dashboard demonstrates how a **well-structured data warehouse** can enable insights without requiring changes to underlying data.
 
 ---
 
@@ -196,7 +161,6 @@ The warehouse enables analysts to generate insights such as:
 - **Major city events** increase trip volumes in affected boroughs.
 - **Average trip speeds** drop during rush hours and large-scale events.
 
-> These examples illustrate the **analytical capabilities enabled by the data warehouse**, without performing the full analysis within the data engineering layer itself.
 
 
 
