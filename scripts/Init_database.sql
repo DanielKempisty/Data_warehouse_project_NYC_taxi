@@ -4,8 +4,8 @@ Create Database and Schemas
 =============================================================
 Script Purpose:
     This script creates a new database named 'NYC_taxi' after checking if it already exists. 
-    If the database exists, it is dropped and recreated. Additionally, the script sets up three schemas 
-    within the database: 'bronze', 'silver', and 'gold'.
+    If the database exists, it is dropped and recreated. Additionally, the script sets up four schemas 
+    within the database: 'bronze', 'silver', 'gold' nad 'etl'.
 	
 WARNING:
     Running this script will drop the entire 'NYC_taxi' database if it exists. 
@@ -40,3 +40,5 @@ GO
 
 CREATE SCHEMA gold;
 GO
+	
+CREATE SCHEMA etl;
